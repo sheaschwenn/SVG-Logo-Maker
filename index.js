@@ -51,7 +51,11 @@ inquirer
         }
     ])
 .then((data)=>{
-    fs.writeFile('logo.svg',Triangle.render(data),err =>{
+    let shape;
+    if(data.shape === "Triangle"){
+        shape = new Triangle(data.logoText, data.textColor, data.shapeColor)
+    }
+    fs.writeFile('logo.svg',shape.render(data),err =>{
         err? console.error(err):console.log("Generated logo.svg")
     })
 })
