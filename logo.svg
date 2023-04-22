@@ -1,4 +1,4 @@
 <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="150, 18 244, 182 56, 182" fill= "green"/>
-        <text x="100" y="100" fill="pink" text-anchor="middle" alignment-badeline="middle">sss</text>
+        <circle cx="35" cy="80" r="30" fill = "blue"/>
+        <text x="100" y="100" fill="pink" text-anchor="middle" alignment-badeline="middle">ss</text>
         </svg>

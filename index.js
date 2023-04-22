@@ -15,7 +15,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Triangle = require("./lib/triangle");
-
+const Square = require("./lib/square")
+const Circle = require("./lib/circle")
 
 inquirer
     .prompt([
@@ -54,6 +55,12 @@ inquirer
     let shape;
     if(data.shape === "Triangle"){
         shape = new Triangle(data.logoText, data.textColor, data.shapeColor)
+    }
+    else if(data.shape === "Square"){
+        shape = new Square(data.logoText, data.textColor, data.shapeColor)
+    }
+    else{
+        shape = new Circle(data.logoText, data.textColor, data.shapeColor)
     }
     fs.writeFile('logo.svg',shape.render(data),err =>{
         err? console.error(err):console.log("Generated logo.svg")
