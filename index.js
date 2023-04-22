@@ -14,13 +14,24 @@
 
 const fs = require("fs");
 const inquirer = require("inquirer");
+const Triangle = require("./lib/triangle");
+
 
 inquirer
     .prompt([
         {
             type: 'input',
             message: "Enter up to three characters for your logo",
-            name: 'logoText'
+            name: 'logoText',
+            validate: function characters(logoText){
+                if(logoText.length > 3){
+                    console.log("Please only enter three characters")
+                    return;
+                }
+                else{
+                    return true
+                    }
+            }
         },
         {
             type: 'input',
@@ -39,8 +50,8 @@ inquirer
             name: 'shapeColor'
         }
     ])
-// .then((data)=>{
-//     fs.writeFile('logo.svg',data,err =>{
-//         err? console.error(err):console.log("Generated logo.svg")
-//     })
-// })
+.then((data)=>{
+    fs.writeFile('logo.svg',Triangle.render(data),err =>{
+        err? console.error(err):console.log("Generated logo.svg")
+    })
+})

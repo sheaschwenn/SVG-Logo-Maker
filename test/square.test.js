@@ -9,6 +9,16 @@ describe('Square', () => {
 
         })
     })
-    // it("should verify that Shape  ")
+    describe("render(), method", () => {
+        it("should give svg string", () => {
+            const square = new Square();
+            square.color("blue");
+
+            expect(square.render()).toEqual('<rect width = "300" height ="100" fill = "blue"/>')
+
+        })
+
+
+    })
 
 })
