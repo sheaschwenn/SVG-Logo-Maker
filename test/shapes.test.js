@@ -17,7 +17,12 @@ describe('Shape', () => {
         })
 
         it("should return a string of dynamicly created code for svg file", () =>{
-            const shape = new Shape()
+                    const shape = new Shape();
+                    
+        
+                    expect(typeof shape.render()).toBe('string')
+        
+                })
             
         })
     })
