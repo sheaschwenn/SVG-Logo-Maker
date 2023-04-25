@@ -1,18 +1,4 @@
-// Pseudo code 
-// require inquirer to prompt users
-// require fs to write .svg file 
-// user can onlyinput 3 characters so look into how to make the a restriction for inquirer
-// color keyword or hexcode for text
-// prompt with list of shapes cirlce, triangle and square 
-// color keyword or hexcode for shape
-// fs.writeFile('logo.svg', ,err etc)
-// look into requirements for an svg file
-// in shapes, create a file that makes the actual svg file 
-// tests for if the user has less than 3 characters 
-// test to see if shape is the write shape? 
-// create classes for 
-
-// requiring all packages and moduels needed 
+// requiring all packages and modules needed 
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Triangle = require("./lib/triangle");
