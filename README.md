@@ -17,7 +17,7 @@ Command-line application to create a custom SVG logo
 This command-line application generates a custom SVG logo based on users input of text, text color, shape and shape color. The users inputs are rendered in a SVG file. 
 
 
-![Site Langing Page](./site.gif)
+![Command line input](./images/Screenshot%202023-04-23%20121358.png)
 
 
 ## Table of Contents 
@@ -71,7 +71,6 @@ class Square extends Shape{
 
 ## Usage 
 To create a simple custom SVG logo
-To install
 
 ```md
 ![alt text](assets/images/screenshot.png)
